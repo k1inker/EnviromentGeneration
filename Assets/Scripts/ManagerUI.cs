@@ -54,7 +54,7 @@ public class ManagerUI : MonoBehaviour
     }
     public void SetHeightTerrain()
     {
-        _parametrsTerrain.SetHeight(_heightTerraineSlider.value);
+        _parametrsTerrain.SetHeight((int)_heightTerraineSlider.value);
     }
     public void SetNoiseTerrain()
     {

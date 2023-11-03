@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public static class HandlerTerrain
 {
@@ -74,5 +75,9 @@ public static class HandlerTerrain
     public static float GetMinHeight()
     {
         return _minTerrainHeight;
+    }
+    public static float GetHeight(Vector3 position, float scaleNoise = 10f)
+    {
+        return Mathf.PerlinNoise(position.x * (1 / scaleNoise), position.z * (1 / scaleNoise)) * position.y;
     }
 }
